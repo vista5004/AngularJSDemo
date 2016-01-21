@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
-  <script src="lib/angular.min.js" type="text/javascript"></script>
-  <script src="lib/angular-animate.js" type="text/javascript"></script>
-  <script src="lib/jquery-2.1.4.min.js" type="text/javascript"></script>
+  <script src="//cdn.bootcss.com/angular.js/1.4.1/angular.min.js"></script>
+  <script src="//cdn.bootcss.com/angular.js/1.4.1/angular-animate.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <style>
     *{
       padding: 0;
@@ -89,9 +89,17 @@
   /*缓存*/
   angular.module('template/window.html',[])
     .run(['$templateCache', function ($templateCache) {
-      $templateCache.put('template/window.html','<div>' +
-        '<h1>tittle</h1>' +
-        '<p ng-click="func()">123123</p>' +
+      $templateCache.put('template/window.html','<div class="windowContent">' +
+        '<div class="close_content"> ' +
+        '<button type="button" ng-click="close()" class="closeButton"><span>×</span></button>' +
+        '</div>' +
+        '<div class="window_tittle">' +
+        '<span class="tittle_name">素材库</span>' +
+        '<span class="tittle_message">单击使用</span>' +
+        '<div>' +
+        '<div class="window_left">' +
+        '' +
+        '</div>'+
         '</div>')
     }])
 </script>
