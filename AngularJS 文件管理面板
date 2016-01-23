@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="selectApp">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+  <script src="//cdn.bootcss.com/angular.js/1.4.1/angular.min.js"></script>
+  <script src="//cdn.bootcss.com/angular.js/1.4.1/angular-animate.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      margin: 0;
+    }
+    li{
+      list-style-type: none;
+    }
+    a{
+      text-decoration: none;
+    }
+    .modalground{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: 0.3;
+    }
+    .windowContent{
+      width: 960px;
+      height: 600px;
+      border-radius: 5px;
+      background-color: rgb(255,255,255);
+      position: relative;
+      margin: 0 auto;
+      top: 80px;
+      z-index: 999;
+    }
+    .closeButton {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      border: 0px;
+    }
+    .closeButton span{
+      color: rgb(197,197,197);
+      font-size: 24px;
+      background-color: rgb(247,247,247);
+    }
+    .closeButton span:hover{
+      color: rgb(101, 101, 101);
+    }
+    .window_tittle{
+      width: 100%;
+      height: 60px;
+      background-color: rgb(247,247,247);
+    }
+    .window_tittle .tittle_name{
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      font-size: 20px;
+      color: rgb(116, 128, 126);
+    }
+    .window_tittle .tittle_message{
+      position: absolute;
+      left: 90px;
+      top: 23px;
+      font-size: 14px;
+      color: rgb(163,175,173);
+    }
+    .window_left{
+      width: 200px;
+      height: 545px;
+      position: absolute;
+      top: 60px;
+      background-color: rgb(247,247,247);
+    }
+    .window_left ul{
+      width: 100%;
+      height: 100%;
+    }
+    .window_left ul .window_left_li{
+      width: 200px;
+      height: 50px;
+      display: block;
+      float: left;
+    }
+    .window_left ul .window_left_li a{
+      display: block;
+      width:200px;
+      height: 50px;
+      font-size: 16px;
+      line-height: 50px;
+      position: absolute;
+      text-align: left;
+      text-indent: 20px;
+      color: rgb(116, 128, 126);
+    }
+    .liHidden{
+      z-index: 999;
+      background-color: rgb(247, 247, 247);
+    }
+    .liShow{
+      background-color: rgb(255,255,255);
+      border-bottom: 1px solid gray;
+    }
+    .window_left ul .window_left_add{
+      width: 100px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body ng-controller="selectController">
+
+</body>
+<script>
+  angular.module('selectApp',["template/window.html","selectAppList",])
+    .controller('selectController',['$scope','model',function ($scope,model) {
+      model.open({
+        backgroundStyle:'modalground',
+        templateUrl:'template/window.html',
+        className:'windowContent'
+      });
+
+
+
+
+
+    }])
+    .factory('model',['$animate','$compile','$rootScope','$document','$timeout','$q', function ($animate, $compile, $rootScope, $document, $timeout, $q) {
+      var body=$document.find('body').eq(0);
+      var modelStack={
+        open: function (modalInstance) {
+          /*下面是背景*/
+          var newRoot=$rootScope.$new(true);
+          var backGround=angular.element('<div ><div>');
+          backGround.attr({
+            class:modalInstance.backgroundStyle,
+          });
+          var backGroundLink=$compile(backGround)(newRoot);
+          body.append(backGroundLink);
+          /*下面是对话框*/
+          var modalContent=angular.element('<div model-window="modal-window"></div>');
+          modalContent.attr({
+            'template-url':modalInstance.templateUrl,
+            'size':modalInstance.size,
+            'class':modalInstance.className
+          });
+          var modalContentLink=$compile(modalContent)(newRoot);
+          body.append(modalContentLink);
+        }
+      };
+      return modelStack;
+    }])
+    .directive('modelWindow',['$animate','$q','$injector', function ($animate, $q,$injector) {
+      return{
+        restrict:'EA',
+        replace:true,
+        templateUrl: function (tElement, tAttrs) {
+          return tAttrs.templateUrl;
+        },
+        link: function (scope,element,attr) {
+
+        }
+      }
+    }]);
+  //左侧区域单独的指令
+  angular.module('selectAppList',["template/window-list.html"])
+    .controller('selectAppListController', function () {
+
+    })
+    .directive('listContainer',["$http","$q","$controller" ,function ($http,$q,$controller) {
+      return{
+        restrict:'EA',
+        replace:true,
+        templateUrl:"template/window-list.html",
+        controller: function ($scope) {//通过子指令继承这个指令完成通信
+          this.scopeGroup=[];
+          //添加数组
+          this.addScope= function (scope) {
+            var that=this;
+            this.scopeGroup.push(scope);
+            $scope.$on('destroy', function () { //如果监听到当前作用域消失，则把这个作用域删除
+              that.removeScope(scope);
+            })
+          };
+          this.removeScope= function (scope) {
+            var that=this;
+            var index=this.scopeGroup.indexOf(scope);
+            if(index>-1){
+              that.scopeGroup.splice(index,1);
+            }
+          };
+          this.other= function (scope) {
+            var that=this;
+            for(var i=0;i<that.scopeGroup.length;i++){
+              if(that.scopeGroup[i]!=scope){
+                that.scopeGroup[i].isShow=false;
+              }
+            }
+          }
+        }
+      }
+    }])
+    .directive('liA',["$http","$q","$controller","$animate",function ($http,$q,$controller,$animate){
+      return{
+        restrict:'EA',
+        require:'^listContainer',
+        scope:{
+          isShow:'=?'
+        },
+        template:'<li class="window_left_li" ng-class="{\'liShow\':isShow}" ng-click="getSystemFile();changeStyle()"><a href="">图片库</a></li>',
+        link: function (scope, element, attr, listContainer) {
+          listContainer.addScope(scope);
+          scope.changeStyle= function () {
+            scope.isShow=true
+          };
+          scope.$watch('isShow', function (value) {
+            if(value==true){
+              listContainer.other(scope);
+            }
+          })
+        }
+      }
+    }])
+    .directive('liB',["$http","$q","$controller","$animate",function ($http,$q,$controller,$animate){
+      return{
+        restrict:'EA',
+        require:'^listContainer',
+        scope:{
+          isShow:'=?'
+        },
+        template:'<li class="window_left_li" ng-class="{\'liShow\':isShow}" ng-click="getUserFile();changeStyle()"> <a href="">我的图片</a></li>',
+        link: function (scope, element, attr, listContainer) {
+          listContainer.addScope(scope);
+          scope.changeStyle= function () {
+            scope.isShow=true;
+            console.log(1);
+          };
+          scope.$watch('isShow', function (value) {
+            if(value){
+              listContainer.other(scope);
+            }
+          })
+        }
+      }
+    }])
+
+  /*缓存*/
+  angular.module('template/window.html',[])
+    .run(['$templateCache', function ($templateCache) {
+      $templateCache.put('template/window.html','<div class="windowContent">' +
+        '<div class="close_content"> ' +
+          '<button type="button" ng-click="close()" class="closeButton"><span>×</span></button>' +
+        '</div>' +
+        '<div class="window_tittle">' +
+          '<span class="tittle_name">素材库</span>' +
+          '<span class="tittle_message">单击使用</span>' +
+        '<div>' +
+        '<div class="window_left">' +
+          '<ul list-container></ul>' +
+        '</div>'+
+        '</div>')
+    }])
+  //左侧区域单独的缓存
+  angular.module('template/window-list.html',[])
+    .run(['$templateCache', function ($templateCache) {
+      $templateCache.put('template/window-list.html',
+        '<ul>' +
+          '<li-a > 图片库 </li-a>' +
+          '<li-b > 我的图片 </li-b>' +
+          '<li class="window_left_add"> <a href="" ng-click="createTag">添加分组</a></li>' +
+          '<li class="window_left_update">' +
+            '<div class="updataBox">' +
+              '<div class="update_message">大小不超过3M，支持格式：jpg、png、gif，一次最多上传6张</div>' +
+              '<em class="update_tittle">上传</em>' +
+              '<input type="file" multiple="multiple">'+
+            '</div>' +
+          '</li>' +
+        '</ul>')
+    }])
+</script>
+</html>
