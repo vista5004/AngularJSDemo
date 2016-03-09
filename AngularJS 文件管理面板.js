@@ -447,6 +447,9 @@
         templateUrl:'template/window-img.html',
         link: function (scope, element, attr) {
           scope.isGroupShow=1;
+          scope.isContentShow=1;
+          scope.isClicked=1;
+          scope.isClicked2=1;
           scope.getSysImgList= function (id) {
             scope.isGroupShow=id;
             scope.isClicked=id;
@@ -456,28 +459,8 @@
             console.log(id)
           };
           scope.getTopicList= function (id) {
-            switch (id){
-              case 1:scope.iconGroups.iconLists=[
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:1},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:2},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:3},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:4},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:5},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:6},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:7},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:8},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:9},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:10},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:11},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:12},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:13},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:14},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:15},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:16},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:17},
-                {src:"http://p2.wmpic.me/article/2016/01/20/1453256317_JLEihxeW.jpg",alt:18},
-              ]
-            }
+            scope.isContentShow=id;
+
           };
           scope.imgLists=[
             {tittle:"最新",id:1},
@@ -497,6 +480,7 @@
               id:1,
               contents:[
                 {
+                  id:1,
                   iconLists:[
                     {src:"http://p3.wmpic.me/article/2016/01/25/1453693103_qrvxuXVN.jpg",alt:1},
                     {src:"http://p3.wmpic.me/article/2016/01/25/1453693103_qrvxuXVN.jpg",alt:2},
@@ -518,7 +502,6 @@
                     {src:"http://p3.wmpic.me/article/2016/01/25/1453693103_qrvxuXVN.jpg",alt:18},
                   ]
                 }
-
               ]
             },
             {
@@ -533,6 +516,7 @@
               ],
               contents:[
                 {
+                  id:1,
                   iconLists:[
                     {src:"http://img05.tooopen.com/images/20160121/tooopen_sy_155168162826.jpg",alt:1},
                     {src:"http://img05.tooopen.com/images/20160121/tooopen_sy_155168162826.jpg",alt:2},
@@ -553,8 +537,9 @@
                     {src:"http://img05.tooopen.com/images/20160121/tooopen_sy_155168162826.jpg",alt:17},
                     {src:"http://img05.tooopen.com/images/20160121/tooopen_sy_155168162826.jpg",alt:18},
                   ]
-               },
+                },
                 {
+                  id:2,
                   iconLists:[
                     {src:"http://img02.tooopen.com/images/20160125/tooopen_sy_155368082418.jpg",alt:1},
                     {src:"http://img02.tooopen.com/images/20160125/tooopen_sy_155368082418.jpg",alt:2},
@@ -577,6 +562,7 @@
                   ]
                 },
                 {
+                  id:3,
                   iconLists:[
                     {src:"http://p2.wmpic.me/article/2016/01/21/1453344115_kSidwrUH.jpg",alt:1},
                     {src:"http://p2.wmpic.me/article/2016/01/21/1453344115_kSidwrUH.jpg",alt:2},
@@ -600,10 +586,7 @@
                 },
               ]
             },
-
-
-          ];
-
+          ]
         }
       }
     }])
@@ -650,25 +633,29 @@
   angular.module('template/window-img.html',[])
     .run(['$templateCache', function ($templateCache) {
         $templateCache.put('template/window-img.html','' +
-          '<div>' +
+          '<div ng-init="isGroupShow=1">' +
             '<div class="img_tittle_list">' +
               '<ul>' +
-                '<li class="img_tittle_li" ng-repeat="list in imgLists" ><a href="" ng-click="getSysImgList(list.id);" ng-class="{\'isClicked\':isClicked==={{list.id}} }">{{list.tittle}}</a></li>' +
+                '<li class="img_tittle_li" ng-repeat="list in imgLists" ><a href="" ng-click="getSysImgList(list.id);" ng-class="{\'isClicked\':isClicked===list.id }">{{list.tittle}}</a></li>' +
               '</ul>' +
             '</div>' +
             '<div class="img_list_icon" ng-show="groupFlag" ng-repeat="group in iconGroups" >' +
-              '<div ng-class="{\'icon_tittle\':isGroupShow === {{group.id}}}"  ng-show="groupFlag=(isGroupShow === {{group.id}})">' +
+              '<div ng-class="{\'icon_tittle\':isGroupShow === group.id}"  ng-show="groupFlag=(isGroupShow === group.id)">' +
                 '<ul>' +
-                  '<li class="icon_tittle_li" ng-repeat="listTittle in group.tittleGroup"> <a href="" ng-show="listTittle.tittle" ng-click="message(listTittle.id);getTopicList(listTittle.id)" ng-class="{\'isClicked2\':isClicked2 ==={{listTittle.id}}}" ">{{listTittle.tittle}}</a></li>' +
+                  '<li class="icon_tittle_li" ng-repeat="listTittle in group.tittleGroup"> <a href="" ng-show="listTittle.tittle" ' +
+          'ng-click="message(listTittle.id);getTopicList(listTittle.id)" ng-class="{\'isClicked2\':isClicked2 ==={{listTittle.id}}}" ">{{listTittle.tittle}}</a></li>' +
                 '</ul>' +
               '</div>' +
-              '<div ng-class="{\'img_list\':isGroupShow === {{group.id}}}" ">' +
-                '<ul ng-repeat="content in group.contents">' +
+              '<div ng-class="{\'img_list\':isGroupShow === group.id}"  ng-repeat="content in group.contents">' +
+              '<div >' +
+                '<ul ng-show="isContentShow===content.id">' +
                   '<li ng-repeat="imgList in content.iconLists" class="icon_img_li"><img ng-src="{{imgList.src}}" alt="{{imgList.alt}}"/></li>' +
                 '</ul>' +
+              '</div>' +
               '</div>' +
             '</div>' +
           '</div>')
     }])
 </script>
 </html>
+
