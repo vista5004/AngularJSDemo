@@ -1,0 +1,9 @@
+
+<div>
+  <ul class="ngPathOl">
+    <li ng-repeat="state in stateAry" ng-class="{'active':true}[$index ===(stateAry.length-1)]" ng-switch="$index<(stateAry.length-1)">
+      <a ng-switch-when="true" href="{{state.url}}" ng-bind="state.name"></a>
+      <span ng-switch-default>{{state.name}}</span>
+    </li>
+  </ul>
+</div>
