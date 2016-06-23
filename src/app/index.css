@@ -33,6 +33,26 @@
 }
 .contentBox{
   width: 100%;
-  height: 600px;
+  height: 900px;
   border: 1px solid skyblue;
+}
+.contentBox .spanActive{
+  display: inline-block;
+  width: 200px;
+  height: 20px;
+  background: orange;
+  text-align: center;
+}
+.contentBox .spanUnActive{
+  display: inline-block;
+  width: 200px;
+  height: 20px;
+  background: white;
+  text-align: center;
+}
+.contentBox .overview{
+  width:100%;
+  height: 400px;
+  margin: 5px;
+  background: #c4f3ff;
 }

@@ -19,10 +19,14 @@
         templateUrl:'app/main/chart.html',
         controller:'chartController'
       })
+      .state('home.chart.overview',{
+        url:'/overview',
+        templateUrl:'app/main/chartOverView.html',
+        controller:'chartOverViewController'
+      })
       .state('home.finance',{
         url:'/finance',
         template:"<div>555</div>",
-
       })
 
     $urlRouterProvider.otherwise('/home');
