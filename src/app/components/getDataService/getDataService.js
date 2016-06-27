@@ -16,7 +16,20 @@ angular
       });
       return deferred.promise;
     };
+    var getFinanceJSON= function () {
+      var deferred=$q.defer();
+      $http({
+        method:'GET',
+        url:'app/data/financeSalary.json'
+      }).success(function (data, status, header, config) {
+        deferred.resolve(data);
+      }).error(function (data, status, header, config) {
+        deferred.reject(data)
+      });
+      return deferred.promise;
+    };
     return {
-      getOverviewJSON:getOverviewJSON
+      getOverviewJSON:getOverviewJSON,
+      getFinanceJSON:getFinanceJSON
     }
   }])

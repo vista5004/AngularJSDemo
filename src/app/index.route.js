@@ -24,9 +24,19 @@
         templateUrl:'app/main/chartOverView.html',
         controller:'chartOverViewController'
       })
+      .state('home.chart.lazyloading',{
+        url:'/lazyloading',
+        templateUrl:'app/main/chartLazyLoading.html',
+        controller:'chartLazyLoadingController'
+      })
       .state('home.finance',{
         url:'/finance',
-        template:"<div>555</div>",
+        templateUrl:"app/main/finance.html",
+        controller:"financeController"
+      })
+      .state('home.finance.partofmoney',{
+        url:'/partofmoney',
+        templateUrl:'app/main/'
       })
 
     $urlRouterProvider.otherwise('/home');
