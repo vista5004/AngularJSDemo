@@ -1,18 +1,13 @@
-<div class="container">
-  <div class="col-md-4 col-lg-4" >
-    <ul class="nav nav-pills">
-      <li role="presentation"><a ng-href="#/">Home</a></li>
-      <li role="presentation" ng-click="vm.chartShowFun()"><a href="#/home/chart">Chart</a>
-
-      </li>
-      <li role="presentation" ng-click="vm.finaceShowFun()"><a href="#/home/finance">Finance</a>
-
-      </li>
-    </ul>
+<div class="container_box">
+  <div class="left_bar">
+    <div class="left_bar_header">
+      <span class="left_bar_header_img"><img src="assets/images/angular.png" alt="angular"/></span>
+      <span class="left_bar_header_name">{{vm.superName}}</span>
+      <span class="left_bar_header_tittle">{{vm.tittle}}</span>
+    </div>
   </div>
-  <div class="container routerBox">
-    <div ng-path="{{path}}"></div>
+  <div class="top_bar">
 
   </div>
-  <div ui-view="" class="col-lg-12 col-md-12 "></div>
+  <div ui-view=""></div>
 </div>
