@@ -90,16 +90,11 @@ a,a:hover{color:#333;}
 }
 
 .left_bar .left_bar_header .left_bar_header_content{
-  width: 160px;
-  height: 195px;
-  background: rgb(254,254,254);
-  position: absolute;
-  left: 20px;
-  top: 142px;
+
 }
 .left_bar .left_bar_header .left_bar_header_content .left_bar_header_content_ul{
   width: 160px;
-  height: 195px;
+  height: 150px;
   display: block;
 }
 .left_bar .left_bar_header .left_bar_header_content .left_bar_header_content_ul li{
@@ -109,12 +104,91 @@ a,a:hover{color:#333;}
 }
 .left_bar .left_bar_header .left_bar_header_content .left_bar_header_content_ul li a{
   display: inline-block;
-  width: 160px;
+  width: 156px;
   height: 30px;
-  margin:0 2px 0 2px;
-  padding: 3px 20px 3px 20px;
-  line-height: 30px;
+  margin:3px 2px 3px 2px;
+  padding: 2px 20px 2px 20px;
+  line-height: 26px;
 }
+.left_bar .left_bar_header .left_bar_header_content span{
+  display: inline-block;
+  width: 156px;
+  height: 38px;
+  line-height: 38px;
+
+  border-top: 1px solid silver;
+}
+.left_bar .left_bar_header .left_bar_header_content span a{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin:2px 2px 2px 2px;
+  padding: 0 20px 0 20px;
+}
+.left_bar_active_click{
+  background: rgb(244,244,244);
+}
+.left_bar_unActive_click{
+  background: rgb(255,255,255);
+}
+.left_bar_active_hover{
+  background: rgb(244,244,244);
+}
+.left_bar_unActive_hover{
+  background: rgb(255,255,255);
+}
+
+.left_bar_header_content_active{
+  width: 160px;
+  height: 195px;
+  background: rgb(254,254,254);
+  position: absolute;
+  top: 142px;
+  display: block;
+  left: 20px;
+  -webkit-transition: all 1.5s;
+  -moz-transition: all 1.5s;
+  -ms-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s;
+}
+
+.left_bar_header_content_unActive{
+  display: none;
+  width: 160px;
+  height: 195px;
+  background: rgb(254,254,254);
+  position: absolute;
+  left: 25px;
+  top: 142px;
+}
+
+.left_bar .left_bar_body{
+  width: 220px;
+  height: 1000px;
+
+}
+.left_bar .left_bar_body .left_bar_body_box {
+  width: 220px;
+  height: 1000px;
+  position: absolute;
+  top: 157px;
+  left: 0px;
+  background: red;
+}
+.left_bar .left_bar_body .left_bar_body_box .left_bar_body_bar{
+
+  width: 200px;
+  height: 50px;
+}
+
+.left_bar_body_open{
+  background: blue;
+}
+
+
+
+
 
 
 

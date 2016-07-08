@@ -6,7 +6,7 @@ angular
   .directive("ngPath", function () {
     return{
       restrict:'EA',
-      replace:true,
+
       templateUrl:'app/components/ngpath/ngPathDirective.html',
       link: function (scope, element, attr) {
 
