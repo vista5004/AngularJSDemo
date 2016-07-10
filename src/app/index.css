@@ -166,20 +166,93 @@ a,a:hover{color:#333;}
 .left_bar .left_bar_body{
   width: 220px;
   height: 1000px;
-
+  position: absolute;
+  left: 0;
+  top: 173px;
+  background: red;
 }
 .left_bar .left_bar_body .left_bar_body_box {
   width: 220px;
   height: 1000px;
+}
+.left_bar .left_bar_body .left_bar_body_box .left_bar_body_home{
   position: absolute;
-  top: 157px;
-  left: 0px;
-  background: red;
+  left: 0;
+}
+.left_bar .left_bar_body .left_bar_body_box .left_bar_body_layout{
+  position: absolute;
+  left: 0;
+  top: 46px;
+}
+.left_bar .left_bar_body .left_bar_body_box .left_bar_body_chart{
+  position: absolute;
+  left: 0;
+  top: 92px;
+}
+.left_bar .left_bar_body .left_bar_body_box .left_bar_body_mail{
+  position: absolute;
+  left: 0;
+  top: 138px;
+}
+.left_bar .left_bar_body .left_bar_body_box .left_bar_body_form{
+  position: absolute;
+  left: 0;
+  top: 184px;
+}
+.left_bar .left_bar_body .left_bar_body_box .left_bar_body_page{
+  position: absolute;
+  left: 0;
+  top: 230px;
+}
+.left_bar .left_bar_body .left_bar_body_box .left_bar_body_element{
+  position: absolute;
+  left: 0;
+  top: 276px;
+}
+.left_bar .left_bar_body .left_bar_body_box .left_bar_body_table{
+  position: absolute;
+  left: 0;
+  top: 322px;
+}
+.left_bar .left_bar_body .left_bar_body_box .left_bar_body_photo{
+  position: absolute;
+  left: 0;
+  top: 368px;
+}
+.left_bar .left_bar_body .left_bar_body_box .left_bar_body_animate {
+  position: absolute;
+  left: 0;
+  top: 414px;
+}
+.left_bar .left_bar_body .left_bar_body_box .left_bar_body_tool{
+  position: absolute;
+  left: 0;
+  top: 460px;
 }
 .left_bar .left_bar_body .left_bar_body_box .left_bar_body_bar{
-
-  width: 200px;
+  display: block;
+  float: left;
+  width: 220px;
   height: 50px;
+}
+
+.left_bar .left_bar_body .left_bar_body_box .left_bar_body_bar .left_bar_body_bar_span{
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  left: 25px;
+}
+.left_bar .left_bar_body .left_bar_body_box .left_bar_body_bar .left_bar_body_bar_a{
+  display: inline-block;
+  position: absolute;
+  left: 48px;
+  top: 18px;
+}
+.left_bar .left_bar_body .left_bar_body_box .left_bar_body_bar .left_bar_body_bar_i {
+  display: inline-block;
+  position: absolute;
+  left:195px;
+  top: 18px;
 }
 
 .left_bar_body_open{

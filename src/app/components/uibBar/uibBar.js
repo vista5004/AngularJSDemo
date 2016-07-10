@@ -47,8 +47,13 @@
           cycleBar.addGroup(scope);
           var openClass=attr.openClass;
           var isOpen=attr.isOpen;
+          var beforeClass=attr.beforeClass;
+          var lastClass=attr.lastClass;
+          var mainClass=attr.mainClass;
           scope.name= attr.tittle;
-
+          element.find("span").addClass(beforeClass);
+          element.find("i").addClass(lastClass);
+          element.addClass(mainClass);
           scope.$watch("isLeftBarOpen", function (newValue) {
             if(newValue===true){
               element.addClass(openClass);
