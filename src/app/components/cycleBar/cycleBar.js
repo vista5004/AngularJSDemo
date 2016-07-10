@@ -7,7 +7,7 @@
     .directive("cycleBar",function () {
       return{
         restrict:'EA',
-        templateUrl:'app/components/uibBar/uibLeftBar.html',
+        templateUrl:'app/components/cycleBar/cycleBar.html',
         replace:true,
         transclude: true,
        controller: function () {
@@ -35,10 +35,10 @@
         }
       }
     })
-   .directive("cycleBarGroup", function () {
+   .directive("cycleBarGroup",['$compile',function ($compile) {
       return{
         restrict:'EA',
-        templateUrl:"app/components/uibBar/uibLeftBarGroup.html",
+        templateUrl:"app/components/cycleBar/cycleBarGroup.html",
         require:'?^cycleBar',
         transclude:true,
         replace:true,
@@ -50,6 +50,12 @@
           var beforeClass=attr.beforeClass;
           var lastClass=attr.lastClass;
           var mainClass=attr.mainClass;
+          var keyName=mainClass.split("_").pop();
+          //console.log(keyName);
+          var ele=angular.element('<div cycle-content ></div>');
+          ele.attr('content-name',keyName);
+          var eleScope=$compile(ele)(scope);
+          element.append(eleScope);
           scope.name= attr.tittle;
           element.find("span").addClass(beforeClass);
           element.find("i").addClass(lastClass);
@@ -64,6 +70,6 @@
           })
         }
       }
-    })
+    }])
 
 })()
