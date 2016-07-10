@@ -169,11 +169,11 @@ a,a:hover{color:#333;}
   position: absolute;
   left: 0;
   top: 173px;
-  background: red;
 }
 .left_bar .left_bar_body .left_bar_body_box {
   width: 220px;
   height: 1000px;
+  color: #a7b1c2;
 }
 .left_bar .left_bar_body .left_bar_body_box .left_bar_body_home{
   position: absolute;
@@ -247,6 +247,8 @@ a,a:hover{color:#333;}
   position: absolute;
   left: 48px;
   top: 18px;
+  font-size: 14px;
+  color: #a7b1c2;
 }
 .left_bar .left_bar_body .left_bar_body_box .left_bar_body_bar .left_bar_body_bar_i {
   display: inline-block;
@@ -256,11 +258,33 @@ a,a:hover{color:#333;}
 }
 
 .left_bar_body_open{
-  background: blue;
+  background: rgb(41,56,70);
 }
 
-
-
+.left_bar_body_bar_i_open{
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.left_bar_body_bar_i_close{
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
 
 
 
