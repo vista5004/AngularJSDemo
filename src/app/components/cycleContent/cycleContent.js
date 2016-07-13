@@ -7,43 +7,50 @@
     .directive("cycleContent", function () {
       return{
         restrict:'EA',
+        replace:true,
+        transclude:true,
         templateUrl: function (element, attrs) {
-          switch (attrs.contentName){
-            case "home":
-              console.log(attrs.contentName);
-                  return "app/components/cycleContent/cycleContentHome.html";
-            break;
-            case "layout":
-              return "app/components/cycleContent/cycleContentHome.html";
-              break;
-            case "chart":
-              return "app/components/cycleContent/cycleContentHome.html";
-              break;
-            case "mail":
-              return "app/components/cycleContent/cycleContentHome.html";
-              break;
-            case "form":
-              return "app/components/cycleContent/cycleContentHome.html";
-              break;
-            case "element":
-              return "app/components/cycleContent/cycleContentHome.html";
-              break;
-            case "table":
-              return "app/components/cycleContent/cycleContentHome.html";
-              break;
-            case "photo":
-              return "app/components/cycleContent/cycleContentHome.html";
-              break;
-            case "animate":
-              return "app/components/cycleContent/cycleContentHome.html";
-              break;
-            case "tool":
-              return "app/components/cycleContent/cycleContentHome.html";
-              break;
+          if(attrs.contentName==="home"){
+            return 'app/components/cycleContent/cycleContentHome.html'
+          }else if(attrs.contentName==="layout"){
+            return 'app/components/cycleContent/cycleContentLayout.html'
           }
-        }|"app/components/cycleContent/cycleContentEmpty.html",
+          else if(attrs.contentName==="chart"){
+            return 'app/components/cycleContent/cycleContentChart.html'
+          }
+          else if(attrs.contentName==="mail"){
+            return 'app/components/cycleContent/cycleContentMail.html'
+          }
+          else if(attrs.contentName==="form"){
+            return 'app/components/cycleContent/cycleContentForm.html'
+          }
+          else if(attrs.contentName==="page"){
+            return 'app/components/cycleContent/cycleContentPage.html'
+          }
+          else if(attrs.contentName==="element"){
+            return 'app/components/cycleContent/cycleContentElement.html'
+          }
+          else if(attrs.contentName==="table"){
+            return 'app/components/cycleContent/cycleContentTable.html'
+          }
+          else if(attrs.contentName==="photo"){
+            return 'app/components/cycleContent/cycleContentPhoto.html'
+          }
+          else if(attrs.contentName==="animate"){
+            return 'app/components/cycleContent/cycleContentAnimate.html'
+          }
+          else if(attrs.contentName==="tool"){
+            return 'app/components/cycleContent/cycleContentTool.html'
+          }
+        },
         link: function (scope, element, attrs) {
-          console.log(1);
+          scope.$watch('isLeftBarOpen', function (newValue) {
+            if(newValue===true){
+              scope.left_bar_items_show=true;
+            }else{
+              scope.left_bar_items_show=false;
+            }
+          })
         }
       }
     })

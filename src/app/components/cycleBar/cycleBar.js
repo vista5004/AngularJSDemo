@@ -52,24 +52,30 @@
           var mainClass=attr.mainClass;
           var keyName=mainClass.split("_").pop();
           //console.log(keyName);
-          var ele=angular.element('<div cycle-content ></div>');
+          var ele=angular.element('<div cycle-content></div>');
           ele.attr('content-name',keyName);
           var eleScope=$compile(ele)(scope);
           element.append(eleScope);
           scope.name= attr.tittle;
           element.find("span").addClass(beforeClass);
           element.find("i").addClass(lastClass);
-          element.addClass(mainClass);
+         /* element.addClass(mainClass);*/
           scope.$watch("isLeftBarOpen", function (newValue) {
             if(newValue===true){
-              element.addClass(openClass);
+              element/*.removeClass("left_bar_body_bar").addClass(openClass)*/.css({
+                height:openClass,
+                background:'rgb(37,56,72)'
+              });
               cycleBar.closeOther(scope);
             }else{
-              element.removeClass(openClass);
+              element/*.removeClass(openClass).addClass("left_bar_body_bar")*/.css({
+                height:50,
+                background:'rgb(47,64,80)'
+              });
             }
           })
         }
       }
     }])
 
-})()
+})();
