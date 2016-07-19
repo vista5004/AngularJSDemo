@@ -29,14 +29,25 @@
         templateUrl:'app/main/home/home3.html',
         controller:'home3Controller'
       })
-      .state('home.finance',{
-        url:'/finance',
-        templateUrl:"app/main/finance.html",
-        controller:"financeController"
+      .state('home.layout',{
+        url:'/layout',
+        templateUrl:"app/main/layout/layout.html",
+        controller:"layoutController"
       })
-      .state('home.finance.partofmoney',{
-        url:'/partofmoney',
-        templateUrl:'app/main/'
+      .state('home.Echart',{
+        url:'/Echart',
+        templateUrl:'app/main/chart/Echart.html',
+        controller:"EchartController"
+      })
+      .state('home.D3',{
+        url:'/D3',
+        templateUrl:'app/main/chart/D3.html',
+        controller:'D3Controller'
+      })
+      .state("home.HighChart",{
+        url:'/HighChart',
+        templateUrl:'app/main/chart/HighChart.html',
+        controller:'HighChartController'
       })
 
     $urlRouterProvider.otherwise('/home');
