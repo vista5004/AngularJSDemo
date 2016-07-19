@@ -14,20 +14,20 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
-      .state('home.chart',{
-        url:'/chart',
-        templateUrl:'app/main/chart.html',
-        controller:'chartController'
+      .state('home.home1',{
+        url:'/home1',
+        templateUrl:'app/main/home/home1.html',
+        controller:'home1Controller'
       })
-      .state('home.chart.overview',{
-        url:'/overview',
-        templateUrl:'app/main/chartOverView.html',
-        controller:'chartOverViewController'
+      .state('home.home2',{
+        url:'/home2',
+        templateUrl:'app/main/home/home2.html',
+        controller:'home2Controller'
       })
-      .state('home.chart.lazyloading',{
-        url:'/lazyloading',
-        templateUrl:'app/main/chartLazyLoading.html',
-        controller:'chartLazyLoadingController'
+      .state('home.home3',{
+        url:'/home3',
+        templateUrl:'app/main/home/home3.html',
+        controller:'home3Controller'
       })
       .state('home.finance',{
         url:'/finance',

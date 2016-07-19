@@ -50,7 +50,17 @@
             }else{
               scope.left_bar_items_show=false;
             }
+          });
+          $(element).find("a").on("click",function(){
+            console.log(this);
+            $(element).find("a").css({
+              "color":"#8994a6"
+            });
+            $(this).css({
+              "color":"white"
+            })
           })
+
         }
       }
     })
