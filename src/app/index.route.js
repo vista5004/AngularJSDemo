@@ -69,6 +69,22 @@
         templateUrl:'app/main/form/normalForm.html',
         controller:'normalFormController'
       })
+      .state("home.normalValidate",{
+        url:"/normalValidate",
+        templateUrl:'app/main/form/normalValidate',
+        controller:'normalValidateController'
+      })
+      .state("home.advanceForm",{
+        url:'/advanceForm',
+        templateUrl:'app/main/form/advanceForm.html',
+        controller:'advanceFormController'
+      })
+      .state("home.formGuide",{
+        url:'/formGuide',
+        templateUrl:'app/main/form/formGuide.html',
+        controller:'formGuideController'
+      })
+
 
     $urlRouterProvider.otherwise('/home');
   }

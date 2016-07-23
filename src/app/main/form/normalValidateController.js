@@ -4,7 +4,7 @@
 (function () {
   angular
     .module("angularJsdemo")
-    .controller("normalValidate", function () {
+    .controller("normalValidateController", function () {
 
     })
 })();
