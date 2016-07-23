@@ -8,7 +8,7 @@
     .controller("layoutController", function () {
 
     })
-})()
+})();
 
 
 

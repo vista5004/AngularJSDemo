@@ -49,6 +49,26 @@
         templateUrl:'app/main/chart/HighChart.html',
         controller:'HighChartController'
       })
+      .state("home.consignee",{
+        url:'/consignee',
+        templateUrl:'app/main/mail/consignee.html',
+        controller:'consigneeController'
+      })
+      .state("home.outBox",{
+        url:'/outBox',
+        templateUrl:'app/main/mail/outBox.html',
+        controller:'outBoxController'
+      })
+      .state("home.letterWriting",{
+        url:"/letterWriting",
+        templateUrl:"app/main/mail/letterWriting.html",
+        controller:"letterWritingController"
+      })
+      .state('home.normalForm',{
+        url:'/normalForm',
+        templateUrl:'app/main/form/normalForm.html',
+        controller:'normalFormController'
+      })
 
     $urlRouterProvider.otherwise('/home');
   }
