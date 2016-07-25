@@ -84,6 +84,83 @@
         templateUrl:'app/main/form/formGuide.html',
         controller:'formGuideController'
       })
+      .state("home.upLoadFile",{
+        url:'/upLoadFile',
+        templateUrl:'app/main/form/upLoadFileController.html',
+        controller:'upLoadFileController'
+      })
+      .state("home.fileEditor",{
+        url:'/fileEditor',
+        templateUrl:'app/main/form/fileEditor.html',
+        controller:'fileEditorController'
+      })
+      .state("home.autoComplete",{
+        url:"/autoComplete",
+        templateUrl:'app/main/form/autoComplete.html',
+        controller:'autoCompleteController'
+      })
+      .state("home.datePicker",{
+        url:'/datePicker',
+        templateUrl:'app/main/form/datePicker.html',
+        controller:'datePickerController'
+      })
+      .state("home.contacts",{
+        url:'/contracts',
+        templateUrl:'app/main/page/contacts.html',
+        controller:'contactsController'
+      })
+      .state("home.personData",{
+        url:'/personData',
+        templateUrl:'app/main/page/personData.html',
+        controller:'personDataController'
+      })
+      .state("home.projectManagement",{
+        url:'/projectManagement',
+        templateUrl:'app/main/page/projectManagement',
+        controller:'projectManagementController'
+      })
+      .state("home.teamManagement",{
+        url:'/teamManagement',
+        templateUrl:'app/main/page/teamManagement',
+        controller:'teamManagementController'
+      })
+      .state("home.informationFlow",{
+        url:'/informationFlow',
+        templateUrl:'app/main/page/informationFlow.html',
+        controller:'informationFlowController'
+      })
+      .state("home.customerManagement",{
+        url:'/customerManagement',
+        templateUrl:'app/main/page/customerManagement.html',
+        controller:'customerManagementController'
+      })
+      .state('home.fileManagement',{
+        url:'/fileManagement',
+        templateUrl:'app/main/page/fileManagement.html',
+        controller:'fileManagementController'
+      })
+      .state('home.calendar',{
+        url:'/calendar',
+        templateUrl:'app/main/page/calendar.html',
+        controller:'calendarController'
+      })
+      .state("home.blog",{
+        url:'/blog',
+        templateUrl:'app/main/page/blog.html',
+        controller:'blogController'
+      })
+      .state("home.FAQ",{
+        url:'/FAQ',
+        templateUrl:'app/main/page/FAQ.html',
+        controller:'FAQController'
+      })
+      .state("home.timeAxis",{
+        url:'timeAxis',
+        templateUrl:'app/main/page/timeAxis.html',
+        controller:'timeAxisController'
+      })
+
+
 
 
     $urlRouterProvider.otherwise('/home');
