@@ -199,8 +199,76 @@
         templateUrl:'app/main/page/500Page.html',
         controller:'500PageController'
       })
-
-
+      .state("home.emptyPage",{
+        url:'/empty',
+        templateUrl:'app/main/page/emptyPage.html',
+        controller:'emptyPageController'
+      })
+      .state("home.composing",{
+        url:'/composing',
+        templateUrl:'app/main/UI/composing.html',
+        controller:'composingController'
+      })
+      .state("home.fontIcon",{
+        url:'fontIcon',
+        templateUrl:'app/main/UI/fontIcon.html',
+        controller:'fontIconController'
+      })
+      .state("home.button",{
+        url:'/button',
+        templateUrl:'app/main/UI/button.html',
+        controller:'buttonController'
+      })
+      .state("home.tab",{
+        url:'/tab',
+        templateUrl:'app/main/UI/tab.html',
+        controller:'tabController'
+      })
+      .state("home.notice",{
+        url:'/notice',
+        templateUrl:'app/main/UI/notice.html',
+        controller:'noticeController'
+      })
+      .state("home.progressBar",{
+        url:'/progressBar',
+        templateUrl:'app/main/UI/progressBar.html',
+        controller:'progressBarController'
+      })
+      .state("home.video",{
+        url:'/video',
+        templateUrl:'app/main/UI/video.html',
+        controller:'videoController'
+      })
+      .state("home.modal",{
+        url:'/modal',
+        templateUrl:'app/main/UI/modal.html',
+        controller:'modalController'
+      })
+      .state("home.tree",{
+        url:'/tree',
+        templateUrl:'app/main/UI/tree.html',
+        controller:'treeController'
+      })
+      .state("home.toastr",{
+        url:'/toastr',
+        templateUrl:'app/main/UI/toastr.html',
+        controller:'toastrController'
+      })
+      .state("home.text",{
+        url:'/text',
+        templateUrl:'app/main/UI/text.html',
+        controller:'textController'
+      })
+      .state("home.loading",{
+        url:'/loading',
+        templateUrl:'app/main/UI/loading.html',
+        controller:'loadingController'
+      })
+      .state("home.components",{
+        url:'/components',
+        templateUrl:'app/main/UI/components.html',
+        controller:'componentsController'
+      })
 
 
 
