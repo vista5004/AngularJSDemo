@@ -155,10 +155,51 @@
         controller:'FAQController'
       })
       .state("home.timeAxis",{
-        url:'timeAxis',
+        url:'/timeAxis',
         templateUrl:'app/main/page/timeAxis.html',
         controller:'timeAxisController'
       })
+      .state("home.labelWall",{
+        url:'/labelWall',
+        templateUrl:'app/main/page/labelWall.html',
+        controller:'labelWallController'
+      })
+      .state("home.ticket",{
+        url:'/ticket',
+        templateUrl:'app/main/page/ticket.html',
+        controller:'ticketController'
+      })
+      .state("home.searchResult",{
+        url:'/searchResult',
+        templateUrl:'app/main/page/searchResult.html',
+        controller:'searchResultController'
+      })
+      .state("home.forum",{
+        url:'/forum',
+        templateUrl:'app/main/page/forum.html',
+        controller:'forumController'
+      })
+      .state("home.IM",{
+        url:'/IM',
+        templateUrl:'app/main/page/IM.html',
+        controller:'IMController'
+      })
+      .state("home.loginAndRegister",{
+        url:'/loginAndRegister',
+        templateUrl:'app/main/page/loginAndRegister.html',
+        controller:'loginAndRegisterController'
+      })
+      .state("home.404Page",{
+        url:'/404Page',
+        templateUrl:'app/main/page/404Page.html',
+        controller:'404PageController'
+      })
+      .state("home.500Page",{
+        url:'/500Page',
+        templateUrl:'app/main/page/500Page.html',
+        controller:'500PageController'
+      })
+
 
 
 
