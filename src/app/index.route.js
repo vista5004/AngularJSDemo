@@ -269,6 +269,46 @@
         templateUrl:'app/main/UI/components.html',
         controller:'componentsController'
       })
+      .state("home.basicTable",{
+        url:'/basicTable',
+        templateUrl:'app/main/tables/basicTable.html',
+        controller:'basicTableController'
+      })
+      .state("home.ngTable",{
+        url:'/ngTable',
+        templateUrl:'app/main/tables/ngTable.html',
+        controller:'ngTableController'
+      })
+      .state("home.jqGrid",{
+        url:'/jqGrid',
+        templateUrl:'app/main/tables/jqGrid.html',
+        controller:'jqGridController'
+      })
+      .state("home.fooTable",{
+        url:'/fooTable',
+        templateUrl:'app/main/tables/fooTable.html',
+        controller:'fooTableController'
+      })
+      .state("home.basicPhoto",{
+        url:'/basicPhoto',
+        templateUrl:'app/main/photoAlbum/basicPhoto.html',
+        controller:'basicPhotoController'
+      })
+      .state("home.photoSwitch",{
+        url:'/photoSwitch',
+        templateUrl:'app/main/photoAlbum/photoSwitch.html',
+        controller:'photoSwitchController'
+      })
+      .state("home.Blueimp",{
+        url:'/Blueimp',
+        templateUrl:'app/main/photoAlbum/Blueimp.html',
+        controller:'BlueimpController'
+      })
+      .state("home.Blueimp",{
+        url:'/Blueimp',
+        templateUrl:'app/main/tools/formCreater.html',
+        controller:'formCreaterController'
+      })
 
 
 
