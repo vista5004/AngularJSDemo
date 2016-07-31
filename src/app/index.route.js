@@ -304,8 +304,8 @@
         templateUrl:'app/main/photoAlbum/Blueimp.html',
         controller:'BlueimpController'
       })
-      .state("home.Blueimp",{
-        url:'/Blueimp',
+      .state("home.formCreater",{
+        url:'/formCreater',
         templateUrl:'app/main/tools/formCreater.html',
         controller:'formCreaterController'
       })
