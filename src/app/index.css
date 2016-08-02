@@ -425,12 +425,66 @@ a:hover{
   margin-left: 8px;
   font-weight: 200;
 }
+/*个人信息及项目特点*/
 .mainPage .home1_content .home1_information{
   position: absolute;
   top: 171px;
   left: 0;
 
 }
+.mainPage .home1_content .home1_information .home1_QR_code{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 442px;
+  height: 388px;
+  background: skyblue;
+}
+.mainPage .home1_content .home1_information .home1_QR_code h1{
+  font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: 100;
+  margin-left: 22px;
+  margin-top: 34px;
+  color: #676a6c;
+}
+.mainPage .home1_content .home1_information .home1_QR_code p{
+  font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: rgb(103, 106, 108);
+  font-size: 12px;
+  margin-top: 18px;
+  margin-left: 22px;
+}
+.mainPage .home1_content .home1_information .home1_QR_code img{
+  margin-left: 22px;
+  margin-top: 20px;
+  width: 264px;
+  height: 264px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
