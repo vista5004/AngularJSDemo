@@ -426,13 +426,15 @@ a:hover{
   font-weight: 200;
 }
 /*个人信息及项目特点*/
-.mainPage .home1_content .home1_information{
+.mainPage .home1_information{
   position: absolute;
-  top: 171px;
-  left: 0;
-
+  left: 20px;
+  top: 170px;
+  height: 400px;
+  padding: 0;
+  margin: 0;
 }
-.mainPage .home1_content .home1_information .home1_QR_code{
+.mainPage  .home1_information .home1_QR_code{
   position: absolute;
   left: 0;
   top: 0;
@@ -440,22 +442,24 @@ a:hover{
   height: 388px;
   background: skyblue;
 }
-.mainPage .home1_content .home1_information .home1_QR_code h1{
+.mainPage .home1_information .home1_QR_code h1{
   font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 26px;
   font-weight: 100;
-  margin-left: 22px;
   margin-top: 34px;
   color: #676a6c;
+  display: inline-block;
+  position: absolute;
+  left: 0;
 }
-.mainPage .home1_content .home1_information .home1_QR_code p{
+.mainPage .home1_information .home1_QR_code p{
   font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: rgb(103, 106, 108);
   font-size: 12px;
   margin-top: 18px;
   margin-left: 22px;
 }
-.mainPage .home1_content .home1_information .home1_QR_code img{
+.mainPage .home1_information .home1_QR_code img{
   margin-left: 22px;
   margin-top: 20px;
   width: 264px;
@@ -463,10 +467,29 @@ a:hover{
 
 }
 
+.mainPage .home1_information .home1_instruction{
 
+  height: 388px;
+  position: absolute;
+  left: 442px;
+  top: 0;
+ border: 1px solid saddlebrown;
+}
 
-
-
+.mainPage .home1_information .home1_instruction h1{
+  font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: 100;
+  margin-top: 34px;
+  color: #676a6c;
+}
+.mainPage .home1_information .home1_instruction p.content{
+  font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin-top: 16px;
+  color:rgb(103, 106, 108);
+  display: block;
+}
 
 
 
