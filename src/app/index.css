@@ -567,8 +567,8 @@ a:hover{
   margin: 0;
 }
 .mainPage .home1_details .personalInformation{
-  margin: 20px 0 0 5px;
-  height: 445px;
+  margin: 20px 0 20px 5px;
+  height: auto;
 }
 
 .mainPage .home1_details .personalInformation .personalDevelopment{
@@ -578,14 +578,14 @@ a:hover{
   background: #ffffff;
   box-sizing: border-box;
 }
-.mainPage .home1_details .personalInformation .personalDevelopment .titleBox{
+.mainPage .home1_details .personalInformation .personalDevelopment .tittleBox{
   width: 100%;
   height: 44px;
   border-bottom: 1px solid #e7eaec;
   border-top: 5px solid #b9b9b9;
 }
 
-.mainPage .home1_details .personalInformation .personalDevelopment .titleBox h1{
+.mainPage .home1_details .personalInformation .personalDevelopment .tittleBox h1{
   font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: rgb(103, 106, 108);
@@ -618,15 +618,63 @@ a:hover{
   line-height: 18px;
   text-align: left;
 }
+.mainPage .home1_details .personalInformation .myInformation{
+  width: 100%;
+  height: 223px;
+  clear: both;
+  background: #ffffff;
+  box-sizing: border-box;
+  margin-top: 24px;
+}
+.mainPage .home1_details .personalInformation .myInformation .tittleBox{
+  width: 100%;
+  height: 44px;
+  border-bottom: 1px solid #e7eaec;
+  border-top: 5px solid #b9b9b9;
+}
+.mainPage .home1_details .personalInformation .myInformation .tittleBox h1{
+  font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: rgb(103, 106, 108);
+  display: inline-block;
+  margin: 14px 0 0 14px;
+}
+.mainPage .home1_details .personalInformation .myInformation .informationBox{
+  margin-left: 18px;
+  margin-top: 16px;
+}
+.mainPage .home1_details .personalInformation .myInformation .informationBox li{
+  margin: 0 0 10px 0;
+  font-family:  'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:rgb(103, 106, 108);
+  display: block;
+}
+.mainPage .home1_details .personalInformation .myInformation .informationBox li i{
+  display: inline-block;
+  font-size: 13px;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: 13px;
+  line-height: 13px;
+  margin: 0 6px 0 0;
+}
+.mainPage .home1_details .personalInformation .myInformation .informationBox li a{
+  color: rgb(51, 122, 183);
+  font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  display: inline-block;
+  margin-left: 6px;
+}
+.mainPage .home1_details .personalInformation .myInformation .informationBox li a:hover{
+  color: rgb(52, 105, 167);
+}
 
+.mainPage .home1_details .update_log{
 
-
-
-
-
-
-
-
+}
 
 
 
