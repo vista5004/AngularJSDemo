@@ -11,13 +11,6 @@
         vm.openContent= function () {
           vm.isDivContent=!vm.isDivContent;
         };
-       /* $rootScope.$on("$stateChangeSuccess", function () {
-          var width=$("window").width();
-          var contentWidth=width-220;
-          $(".mainPage").css({
-            "width":contentWidth
-          })
-        })*/
       $scope.$on('$viewContentLoaded', function () {
         var width=$(window).width();
         var contentWidth=width-220;

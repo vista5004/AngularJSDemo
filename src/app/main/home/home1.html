@@ -69,9 +69,25 @@
       </ul>
     </div>
   </div>
-  <div class="update_log">
+  <div class="update_log col-sm-4">
     <div class="tittleBox">
       <h1>更新日志</h1>
+    </div>
+    <div class="updateContent">
+      <div class="updateContentBox">
+        <div ng-repeat="update in vm.updateContents" >
+          <div class="updateContent_tittle">
+            <h5><a href="#" ng-click="vm.openUpdateContent()">{{update.version}}</a></h5>
+            <i class="updateContentTime">{{update.time}}</i>
+          </div>
+          <div class="updateContentBox" ng-class="{true:'updateContentOpen',false:'updateContentClose'}[vm.isUpdateContentOpen]">
+            <p class="updateContentBoxHeader">{{update.header}}</p>
+            <ol class="updateContentBoxList" ng-repeat="list in update.lists">
+              <li>{{list.item}}</li>
+            </ol>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="donation">
