@@ -16,9 +16,14 @@
   function pageWidth(){
     setTimeout(function () {
       var beginWidth=$(window).width()-220;
+      /*页面内容部分*/
       $(".mainPage").css({
         "width":beginWidth
       });
+      /*页面头部部分*/
+      $(".top_bar").css({
+        "width":beginWidth
+      })
     },100);
     $(window).resize(function () {
       var width=$(window).width();

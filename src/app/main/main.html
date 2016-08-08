@@ -1,4 +1,4 @@
-<div class="container_box">
+<div class="container_box ">
   <div class="left_bar">
     <div class="left_bar_header">
       <span class="left_bar_header_img"><img src="assets/images/angular.png" alt="angular"/></span>
@@ -23,8 +23,16 @@
       </div>
     </div>
   </div>
-  <div class="top_bar">
+  <div class="top_bar row">
 
+    <div class="top_bar_header">
+      <i class="glyphicon glyphicon-th-list"></i>
+      <div class="search"><input type="text" placeholder="请输入要查询的内容"/></div>
+      <div class="notes"></div>
+    </div>
+    <div class="top_bar_names">
+
+    </div>
   </div>
   <div ui-view class="mainPage"></div>
 </div>

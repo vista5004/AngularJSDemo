@@ -385,6 +385,31 @@ a:hover{
   width: 100%;
   border-bottom: 2px solid black;
 }
+.top_bar .top_bar_header{
+  height: 60px;
+  background: #f3f3f4;
+  width: 100%;
+}
+.top_bar .top_bar_header  i{
+  margin: 14px 0 0 14px;
+  color: #1ab394;
+  font-size: 30px;
+  display: inline-block;
+}
+.top_bar .top_bar_header .search{
+  height: 26px;
+  width: 180px;
+  position: absolute;
+  left: 55px;
+  top: 20px;
+  display: inline-block;
+}
+.top_bar .top_bar_header .search input{
+  height: 26px;
+  width: 180px;
+  background:#f3f3f4;
+  font-size: 15px;
+}
 
 
 
@@ -416,10 +441,7 @@ a:hover{
 
 
 
-
-
-
-/*主页1*/
+  /*主页1*/
 .mainPage{
   position: absolute;
   top: 103px;
