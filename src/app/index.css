@@ -693,29 +693,96 @@ a:hover{
 .mainPage .home1_details .update_log .updateContent{
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   background: #ffffff;
+}
+
+.mainPage .home1_details .update_log .updateContent .updateContent_tittle{
+  margin: 0 14px 0 14px;
+  height: 38px;
+  background: #f5f5f5;
+  border: 1px solid #dddddd;
+}
+.mainPage .home1_details .update_log .updateContent .updateContent_tittle h5{
+  display: block;
+  float: left;
+  margin-top: 16px;
+  margin-left: 14px;
+  color:rgb(51, 51, 51);
+  font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  cursor:pointer;
+}
+.mainPage .home1_details .update_log .updateContent .updateContent_tittle i{
+  display: block;
+  width: 78px;
+  height: 16px;
+  color: rgb(202, 68, 64);
+  float: right;
+  font-family:  Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  background: #f9f2f4;
+  margin-top: 14px;
+  margin-right: 14px;
 }
 .mainPage .home1_details .update_log .updateContent .updateContentBox{
   padding-top: 18px;
-  margin-bottom: 20px;
+
 }
-.mainPage .home1_details .update_log .updateContent .updateContent_tittle{
-  margin: 0 14px 4px 14px;
-  height: 38px;
-  background: rgb(182, 182, 182);
+.mainPage .home1_details .update_log .updateContent .updateContentBox .updateContentLists{
+  margin: 0 14px 6px 14px;
+  height: auto;
+  background: #ffffff;
+  border-left: 1px solid #dddddd;
+  border-bottom:1px solid #dddddd;
+  border-right:1px solid #dddddd;
+  box-sizing: border-box;
+  display: none;
+}
+.mainPage .home1_details .update_log .updateContent .updateContentBox .updateContentLists .updateContentBoxHeader{
+  margin-left: 14px;
+  margin-right: 14px;
+  position: relative;
+  top: 14px;
+  background: #fcf8e3;
+  border: 1px solid rgb(250, 235, 204);
+}
+.mainPage .home1_details .update_log .updateContent .updateContentBox .updateContentLists .updateContentBoxHeader p{
+  color: rgb(138, 109, 59);
+  font-family:  'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  padding: 15px;
+}
+.mainPage .home1_details .update_log .updateContent .updateContentBox .updateContentLists .updateContentBoxList{
+  margin-top: 30px;
+  margin-left: 38px;
+  margin-bottom: 10px;
 }
 
+.mainPage .home1_details .update_log .updateContent .updateContentBox .updateContentLists .updateContentBoxList li{
+  list-style-type: decimal;
+  margin: 6px 0 6px 0;
+}
+/*切合展开闭合状态*/
+.mainPage .home1_details .update_log .updateContent .updateContentBox .updateContentOpen{
+  display: block;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
 
-
-
-
-
-
-
-
-
-
+.mainPage .home1_details .update_log .updateContent .updateContentBox .updateContentClose{
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
 
 
 

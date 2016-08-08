@@ -38,7 +38,7 @@
       <li>提供了诸多的UI组件</li>
       <li>集成多款优秀插件，诚意奉献</li>
       <li>提供盒型、全宽、响应式视图模式</li>
-      <li>采用HTML5 & CSS3</li>
+      <li >采用HTML5 & CSS3</li>
       <li>拥有良好的代码结构</li>
       <li>更多……</li>
     </ol>
@@ -75,15 +75,17 @@
     </div>
     <div class="updateContent">
       <div class="updateContentBox">
-        <div ng-repeat="update in vm.updateContents" >
+        <div ng-repeat="update in vm.updateContents" class="updateContentBoxList">
           <div class="updateContent_tittle">
-            <h5><a href="#" ng-click="vm.openUpdateContent()">{{update.version}}</a></h5>
+            <h5><a ng-click="openUpdateContent(this)">{{update.version}}</a></h5>
             <i class="updateContentTime">{{update.time}}</i>
           </div>
-          <div class="updateContentBox" ng-class="{true:'updateContentOpen',false:'updateContentClose'}[vm.isUpdateContentOpen]">
-            <p class="updateContentBoxHeader">{{update.header}}</p>
-            <ol class="updateContentBoxList" ng-repeat="list in update.lists">
-              <li>{{list.item}}</li>
+          <div id="{{update.id}}" class="updateContentLists">
+            <div class="updateContentBoxHeader">
+              <p>{{update.header}}</p>
+            </div>
+            <ol class="updateContentBoxList" >
+              <li ng-repeat="list in update.lists">{{list.item}}</li>
             </ol>
           </div>
         </div>

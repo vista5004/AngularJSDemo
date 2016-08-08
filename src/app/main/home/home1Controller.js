@@ -3,14 +3,22 @@
  */
 (function(){
   angular.module("angularJsdemo")
-    .controller("home1Controller",["$scope","getUpdateService",function($scope,getUpdateService){
+    .controller("home1Controller",["$scope","getUpdateService","$rootElement",function($scope,getUpdateService,$rootElement){
       var vm=$scope.vm={};
-      vm.isUpdateContentOpen=false;
-      vm.openUpdateContent= function () {
-        vm.isUpdateContentOpen=!vm.isUpdateContentOpen;
+      var id=null;
+      var ids=["A","B","C","D","E"];
+      $scope.openUpdateContent= function (data) {
+        id="#"+data.update.id;
+        console.log($(id));
+        $(id).slideToggle();
+        //$scope.isUpdateContentOpen=!$scope.isUpdateContentOpen;
       };
+
       var promise=getUpdateService.updateGet();
       promise.then(function (data) {
+        for(var i=0;i<data.length;i++){
+          data[i].id=ids[i]
+        }
         vm.updateContents=data;
       }, function () {
         console.log("fail to load data");
