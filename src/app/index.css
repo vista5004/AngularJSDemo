@@ -414,7 +414,6 @@ a:hover{
 .top_bar .top_bar_header .notes{
   width: 260px;
   height: 60px;
-  border: 1px solid green;
   float: right;
 }
 .top_bar .top_bar_header .notes .mail{
@@ -516,9 +515,35 @@ a:hover{
   font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-
-
-
+.top_bar .top_bar_header .notes .theme{
+  width: 60px;
+  height: 60px;
+  margin: 0 5px 0 5px;
+  float: left;
+  cursor:pointer;
+}
+.top_bar .top_bar_header .notes .theme:hover{
+  background: #dbdbdc;
+}
+.top_bar .top_bar_header .notes .theme i{
+  font-size: 16px;
+  color: #999c9e;
+  margin-top: 24px;
+  margin-left: 5px;
+}
+.top_bar .top_bar_header .notes .theme .themeTittle{
+  width: 30px;
+  height: 16px;
+  margin-top: -16px;
+  margin-left: 28px;
+}
+.top_bar .top_bar_header .notes .theme .themeTittle span{
+  width: 30px;
+  height: 16px;
+  color: rgb(153, 156, 158);
+  font-size: 14px;
+  font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
 
 
