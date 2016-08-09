@@ -30,6 +30,9 @@
       var contentWidth=width-220;
       $(".mainPage").css({
         "width":contentWidth
+      });
+      $(".top_bar").css({
+        "width":contentWidth
       })
     })
   }

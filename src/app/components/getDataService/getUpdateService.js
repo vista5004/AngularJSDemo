@@ -16,10 +16,27 @@ angular
           deferred.reject(data)
         });
         return deferred.promise;
-      }
-
+      };
+    var newMailMessage= function (url) {
+      var deferred=$q.defer();
+      $http({
+        method:'GET',
+        url:url
+      }).success(function (data) {
+        deferred.resolve(data);
+      }).error(function (data) {
+        deferred.reject(data);
+      });
+      return deferred.promise;
+    };
 
     return{
-      updateGet:updateGet
+      updateGet:updateGet,
+      newMailMessage:newMailMessage
     }
   }])
+
+
+
+
+

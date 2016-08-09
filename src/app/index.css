@@ -379,7 +379,6 @@ a:hover{
 }
 /*top bar*/
 .top_bar{
-  position: absolute;
   margin: 0 0 0 220px;
   height: 103px;
   width: 100%;
@@ -390,32 +389,132 @@ a:hover{
   background: #f3f3f4;
   width: 100%;
 }
-.top_bar .top_bar_header  i{
+.top_bar .top_bar_header  .buttonChange{
+  height:60px;
+  float: left;
+}
+.top_bar .top_bar_header  .buttonChange i{
   margin: 14px 0 0 14px;
   color: #1ab394;
   font-size: 30px;
-  display: inline-block;
 }
 .top_bar .top_bar_header .search{
-  height: 26px;
+  height:60px;
   width: 180px;
-  position: absolute;
-  left: 55px;
-  top: 20px;
-  display: inline-block;
+  float: left;
+  margin-left: 20px;
 }
 .top_bar .top_bar_header .search input{
   height: 26px;
   width: 180px;
   background:#f3f3f4;
   font-size: 15px;
+  margin-top: 17px;
+}
+.top_bar .top_bar_header .notes{
+  width: 260px;
+  height: 60px;
+  border: 1px solid green;
+  float: right;
+}
+.top_bar .top_bar_header .notes .mail{
+  width: 35px;
+  height: 60px;
+  float: left;
+  margin-right: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.top_bar .top_bar_header .notes .mail:hover{
+  background: #dbdbdc;
+}
+.top_bar .top_bar_header .notes .mail i{
+  font-size: 16px;
+  display: block;
+  width: 14px;
+  height: 10px;
+  margin-left: 10px;
+  margin-top: 25px;
+  color: #999c9e;
+}
+.top_bar .top_bar_header .notes .mail .newMail{
+  width: 26px;
+  height: 16px;
+  background: sandybrown;
+  margin-left: 10px;
+  margin-top: -24px;
+  border-radius: 2px;
+}
+.top_bar .top_bar_header .notes .mail .newMail span{
+  width: 26px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  display: inline-block;
+}
+.top_bar .top_bar_header .notes  .message{
+  width: 35px;
+  height: 60px;
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.top_bar .top_bar_header .notes  .message:hover{
+  background: #dbdbdc;
+}
+.top_bar .top_bar_header .notes .message i{
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 25px;
+  color: #999c9e;
+}
+.top_bar .top_bar_header .notes .message .newMessage{
+  margin-left: 14px;
+  margin-top: -32px;
+  width: 26px;
+  height: 16px;
+  background: #2df46b;
+  border-radius: 2px;
+}
+.top_bar .top_bar_header .notes .message .newMessage span{
+  width: 26px;
+  height: 16px;
+  text-align: center;
+  line-height: 16px;
+  display:block;
 }
 
-
-
-
-
-
+.top_bar .top_bar_header .notes .shopCar{
+  width: 60px;
+  height: 60px;
+  margin: 0 5px 0 5px;
+  float: left;
+  cursor: pointer;
+}
+.top_bar .top_bar_header .notes .shopCar:hover{
+  background: #dbdbdc;
+}
+.top_bar .top_bar_header .notes .shopCar i{
+  font-size: 16px;
+  color: #999c9e;
+  margin-top: 24px;
+  margin-left: 5px;
+  display: inline-block;
+}
+.top_bar .top_bar_header .notes .shopCar .shopCarTittle{
+  width: 30px;
+  height: 16px;
+  margin-top: -16px;
+  margin-left: 28px;
+}
+.top_bar .top_bar_header .notes .shopCar span{
+  width: 30px;
+  height: 16px;
+  color: rgb(153, 156, 158);
+  font-size: 14px;
+  font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
 
 

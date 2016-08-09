@@ -26,9 +26,37 @@
   <div class="top_bar row">
 
     <div class="top_bar_header">
-      <i class="glyphicon glyphicon-th-list"></i>
+      <div class="buttonChange">
+        <i class="glyphicon glyphicon-th-list"></i>
+      </div>
       <div class="search"><input type="text" placeholder="请输入要查询的内容"/></div>
-      <div class="notes"></div>
+      <div class="notes">
+        <div class="mail">
+          <a href="#"><i class="glyphicon glyphicon-envelope"></i></a>
+          <div class="newMail" ng-show="vm.isNewMail">
+            <span>{{vm.newMailNumber}}</span>
+          </div>
+        </div>
+        <div class="message">
+          <a href="#"><i class="glyphicon glyphicon-info-sign"></i></a>
+          <div class="newMessage" ng-show="vm.isNewMessage">
+            <span>{{vm.newMessageNumber}}</span>
+          </div>
+        </div>
+        <div class="shopCar">
+          <a href="#"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+          <div class="shopCarTittle">
+            <span>购物</span>
+          </div>
+          <div class="shoppingContent">
+
+          </div>
+        </div>
+        <div class="theme">
+
+        </div>
+
+      </div>
     </div>
     <div class="top_bar_names">
 
