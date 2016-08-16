@@ -1,4 +1,9 @@
 
-<div class="tittleBox">
-
+<div class="tittleContent">
+  <div ng-repeat="data in messageArray" class="repeatBox">
+    <span class="tittleName">
+      {{data.tittle}}
+    </span>
+    <i class='glyphicon glyphicon-remove' key="{{data.tittle}}" ng-click="deleteItem(data)"></i>
+  </div>
 </div>

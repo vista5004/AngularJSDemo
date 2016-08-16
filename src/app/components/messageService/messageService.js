@@ -6,32 +6,46 @@
     .module('angularJsdemo')
     .factory("messageService",["$rootScope",function ($rootScope) {
       var messageArray=[];
-      var sendMessage= function (message) {
-        $rootScope.$broadcast("tittleName",message);
+      var messageWEIYI=[];
+      var i=0;
+      var sendMessage= function () {
+        $rootScope.$broadcast("tittleName");
       };
       var storeMessage= function (item) {
-        if(messageArray.indexOf(item)===-1){
-          messageArray.push(item);
+        if(messageWEIYI.indexOf(item)>-1){
+         return false
+        }else{
+          messageWEIYI.push(item);
+          messageArray.push({
+            tittle:item,
+            key:i
+          });
+          i=i+1;
         }
       };
       var destoryMessage= function (item) {
-        if(messageArray.indexOf(item)>-1){
-            var index=messageArray.indexOf(item);
-            messageArray.splice(index,1);
-        }
+
+        var index=messageWEIYI.indexOf(item);
+        console.log(messageWEIYI);
+        console.log(item);
+        messageWEIYI.splice(index,1);
+        messageArray.splice(index,1);
       };
       var isHasMessage= function (item) {
-        return messageArray.indexOf(item);
+        return messageWEIYI.indexOf(item);
       };
       var popMessage= function () {
-        return messageArray;
+        if(messageWEIYI.length>0){
+          return messageArray.pop();
+        }
       };
      return{
        sendMessage:sendMessage,
        storeMessage:storeMessage,
        destoryMessage:destoryMessage,
        isHasMessage:isHasMessage,
-       popMessage:popMessage
+       popMessage:popMessage,
+       messageArray:messageArray
      }
     }]);
 

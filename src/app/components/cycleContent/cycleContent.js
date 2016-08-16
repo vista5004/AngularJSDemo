@@ -4,7 +4,7 @@
 (function () {
   angular
     .module('angularJsdemo')
-    .directive("cycleContent", function () {
+    .directive("cycleContent", ['messageService',function (messageService) {
       return{
         restrict:'EA',
         replace:true,
@@ -44,6 +44,10 @@
           }
         },
         link: function (scope, element, attrs) {
+          scope.sendTittle= function (message) {
+            messageService.storeMessage(message);
+            messageService.sendMessage();
+          };
           scope.$watch('isLeftBarOpen', function (newValue) {
             if(newValue===true){
               scope.left_bar_items_show=true;
@@ -52,7 +56,7 @@
             }
           });
           $(element).find("a").on("click",function(){
-            console.log(this);
+          /*  console.log(this);*/
             $(element).find("a").css({
               "color":"#8994a6"
             });
@@ -63,5 +67,5 @@
 
         }
       }
-    })
+    }])
 })()

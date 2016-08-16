@@ -47,10 +47,10 @@
           scope.changeStyleAndSendMessage= function () {
             scope.isLeftBarOpen=!scope.isLeftBarOpen;
             if(attr.messageName){
-              messageService.sendMessage(attr.messageName);
-              console.log(attr.messageName)
+              messageService.storeMessage(attr.messageName);
+              messageService.sendMessage();
             }
-          }
+          };
           cycleBar.addGroup(scope);
           var openClass=attr.openClass;
           var isOpen=attr.isOpen;
