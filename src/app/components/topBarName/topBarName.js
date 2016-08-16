@@ -20,7 +20,7 @@
             messageService.destoryMessage(data.tittle);
             messageService.sendMessage();
           };
-          
+
           /*console.log(messageService.popMessage());
           var ele=angular.element("<div class='tittleBox'><span class='tittleName'></span><i class='glyphicon glyphicon-remove'></i></div>");
          // ele.attr('tittle-name',tittle);
