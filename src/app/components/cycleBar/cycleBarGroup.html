@@ -1,5 +1,5 @@
 <div class="left_bar_body_bar"  ng-transclude>
-  <div  ng-click="isLeftBarOpen=!isLeftBarOpen" class="left_bar_body_bar_button">
+  <div  ng-click="changeStyleAndSendMessage()" class="left_bar_body_bar_button">
     <span class="left_bar_body_bar_span"></span>
     <a href="" class="left_bar_body_bar_a" ng-href="#/home/layout">{{name}}</a>
     <i class="left_bar_body_bar_i" ng-class="{true:'left_bar_body_bar_i_open',false:'left_bar_body_bar_i_close'}[isLeftBarOpen]"></i>

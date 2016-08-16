@@ -35,7 +35,7 @@
         }
       }
     })
-   .directive("cycleBarGroup",['$compile',function ($compile) {
+   .directive("cycleBarGroup",['$compile','messageService',function ($compile,messageService) {
       return{
         restrict:'EA',
         templateUrl:"app/components/cycleBar/cycleBarGroup.html",
@@ -44,6 +44,13 @@
         replace:true,
         scope:{},
         link: function (scope,element,attr,cycleBar) {
+          scope.changeStyleAndSendMessage= function () {
+            scope.isLeftBarOpen=!scope.isLeftBarOpen;
+            if(attr.messageName){
+              messageService.sendMessage(attr.messageName);
+              console.log(attr.messageName)
+            }
+          }
           cycleBar.addGroup(scope);
           var openClass=attr.openClass;
           var isOpen=attr.isOpen;

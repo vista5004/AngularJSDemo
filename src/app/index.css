@@ -545,8 +545,18 @@ a:hover{
   font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.top_bar .top_bar_names{
+  height: 43px;
+  width: 100%;
+  display: block;
 
+}
+.top_bar .top_bar_names .tittleBox{
+  height: 43px;
+  width: 100%;
 
+  background: #fa4da0;
+}
 
 
 
