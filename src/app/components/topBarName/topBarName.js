@@ -16,7 +16,7 @@
             //console.log(messageService.messageArray)
             number=messageService.messageArray.length-1;
             console.log(number);
-
+            scope.isSelect=number;
           });
           scope.deleteItem= function (data) {
             console.log(data.tittle);
@@ -26,8 +26,13 @@
 
 
           scope.select= function (data) {
-
-          }
+            $(".select").css({
+              background:'#f3f3f4'
+            });
+            $(".select").eq(data.key).css({
+              background:'#2f4050'
+            })
+          };
 
           /*console.log(messageService.popMessage());
           var ele=angular.element("<div class='tittleBox'><span class='tittleName'></span><i class='glyphicon glyphicon-remove'></i></div>");
