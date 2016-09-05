@@ -23,15 +23,8 @@
             messageService.destoryMessage(data.tittle);
             messageService.sendMessage();
           };
-
-
           scope.select= function (data) {
-            $(".select").css({
-              background:'#f3f3f4'
-            });
-            $(".select").eq(data.key).css({
-              background:'#2f4050'
-            })
+            scope.isSelect=data.key;
           };
 
           /*console.log(messageService.popMessage());
