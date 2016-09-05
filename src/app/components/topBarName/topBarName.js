@@ -10,16 +10,24 @@
         scope:{},
         templateUrl:'app/components/topBarName/topBarName.html',
         link: function (scope, element, attr) {
-
+          var number=null;
           scope.$on("tittleName", function (e, data) {
             scope.messageArray=messageService.messageArray;
             //console.log(messageService.messageArray)
+            number=messageService.messageArray.length-1;
+            console.log(number);
+
           });
           scope.deleteItem= function (data) {
             console.log(data.tittle);
             messageService.destoryMessage(data.tittle);
             messageService.sendMessage();
           };
+
+
+          scope.select= function (data) {
+
+          }
 
           /*console.log(messageService.popMessage());
           var ele=angular.element("<div class='tittleBox'><span class='tittleName'></span><i class='glyphicon glyphicon-remove'></i></div>");

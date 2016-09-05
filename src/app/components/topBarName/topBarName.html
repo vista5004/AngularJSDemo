@@ -1,9 +1,14 @@
 
 <div class="tittleContent">
-  <div ng-repeat="data in messageArray" class="repeatBox">
+  <button  class="tittleLeft"><i class="glyphicon glyphicon-backward"></i></button>
+
+  <div class="titleBox">
+    <div ng-repeat="data in messageArray" class="repeatBox" ng-click="select(data)" ng-class="{true:'TopBarActive',false:'TopBarUnActive'}[isSlect]">
     <span class="tittleName">
       {{data.tittle}}
     </span>
-    <i class='glyphicon glyphicon-remove' key="{{data.tittle}}" ng-click="deleteItem(data)"></i>
+      <i class='glyphicon glyphicon-remove' key="{{data.tittle}}" ng-click="deleteItem(data)"></i>
+    </div>
   </div>
+  <button  class="tittleRight"><i class="glyphicon glyphicon-forward"></i></button>
 </div>

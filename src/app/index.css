@@ -554,17 +554,56 @@ a:hover{
 .top_bar .top_bar_names .tittleContent{
   height: 43px;
   width: 100%;
-
 }
-.top_bar .top_bar_names .tittleContent .repeatBox{
-  width: 150px;
-  height: 43px;
-  background: #fa4da0;
+.top_bar .top_bar_names .tittleContent .tittleLeft{
+  width: 40px;
+  height: 41px;
+  background: silver;
   display: inline-block;
   float: left;
 }
+.top_bar .top_bar_names .tittleContent .tittleRight{
+  width: 40px;
+  height: 41px;
+  background: silver;
+  display: inline-block;
+  float: right;
+}
 
 
+
+.top_bar .top_bar_names .tittleContent .titleBox{
+  height: 41px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+
+.top_bar .top_bar_names .tittleContent .titleBox .repeatBox{
+  height: 41px;
+  background: #f3f3f4;
+  float: left;
+}
+.top_bar .top_bar_names .tittleContent .titleBox .repeatBox .TopBarActive{
+  background: red;
+}
+
+
+
+.top_bar .top_bar_names .tittleContent .titleBox .repeatBox .tittleName{
+  color: rgb(153, 153, 153);
+  font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 41px;
+  margin-left: 15px;
+}
+.top_bar .top_bar_names .tittleContent .titleBox .repeatBox i{
+  color: rgb(153, 153, 153);
+  margin-left: 5px;
+  margin-right: 15px;
+}
 
 
 

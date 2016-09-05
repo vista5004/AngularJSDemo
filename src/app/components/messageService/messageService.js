@@ -26,8 +26,8 @@
       var destoryMessage= function (item) {
 
         var index=messageWEIYI.indexOf(item);
-        console.log(messageWEIYI);
-        console.log(item);
+        /*console.log(messageWEIYI);
+        console.log(item);*/
         messageWEIYI.splice(index,1);
         messageArray.splice(index,1);
       };
