@@ -558,16 +558,20 @@ a:hover{
 .top_bar .top_bar_names .tittleContent .tittleLeft{
   width: 40px;
   height: 41px;
-  background: silver;
+  background: #ebebeb;
   display: inline-block;
   float: left;
+  border-right:1px solid silver;
+  border-top: 1px solid silver;
 }
 .top_bar .top_bar_names .tittleContent .tittleRight{
   width: 40px;
   height: 41px;
-  background: silver;
+  background: #ebebeb;
   display: inline-block;
   float: right;
+  border-left:1px solid silver;
+  border-top: 1px solid silver;
 }
 
 
@@ -585,9 +589,11 @@ a:hover{
   height: 41px;
   background: #f3f3f4;
   float: left;
+  border-top: 1px solid silver;
+  border-right: 1px solid silver;
 }
 .top_bar .top_bar_names .tittleContent .titleBox  .TopBarActive{
-  background: #2f4050;
+  background: #500a15;
 }
 
 

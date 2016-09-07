@@ -10,7 +10,7 @@
           replace:true,
          templateUrl:'app/components/contentUl/contentUl.html',
           link: function (scope,element,attr) {
-            console.log(element.find('a'));
+            //console.log(element.find('a'));
             element.find("a").on("click", function () {
               for(var i=0;i<element.find('a').length;i++){
                 $(element.find('a')[i]).removeClass('left_bar_active_click');

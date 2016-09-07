@@ -4,7 +4,7 @@
 (function () {
   angular
     .module('angularJsdemo')
-    .directive("topbarName", ["$compile","messageService",function ($compile,messageService) {
+    .directive("topbarName", ["$compile","messageService","$timeout",function ($compile,messageService,$timeout) {
       return{
         restrict:'EA',
         scope:{},
@@ -15,34 +15,34 @@
             scope.messageArray=messageService.messageArray;
             //console.log(messageService.messageArray)
             number=messageService.messageArray.length-1;
-            console.log(number);
-            scope.isSelect=number;
+            /*console.log(number);
+            scope.isSelect=number;*/
+            $timeout(function () {
+              $(".repeatBox").css({
+                background:'#f3f3f4'
+              });
+              $(".repeatBox").eq(number).css({
+                background:'#2f4050'
+              })
+            },10)
           });
           scope.deleteItem= function (data) {
-            console.log(data.tittle);
+            //console.log(data.tittle);
             messageService.destoryMessage(data.tittle);
             messageService.sendMessage();
+
           };
           scope.select= function (data) {
-            scope.isSelect=data.key;
+            console.log(data.key);
+            id=data.key;//通过在指令上设置id来对应data.key，并且data.key是通过ng-repeat来传入的所以，这样就可以实现data的不一样。
+
+            $(".repeatBox").css({
+              background:'#f3f3f4'
+            });
+            $("#"+id).css({
+              background:'#2f4050'
+            });
           };
-
-          /*console.log(messageService.popMessage());
-          var ele=angular.element("<div class='tittleBox'><span class='tittleName'></span><i class='glyphicon glyphicon-remove'></i></div>");
-         // ele.attr('tittle-name',tittle);
-          var link=$compile(ele)(scope);
-          element.append(link);*/
-
-        /*  var span=$("<div class='tittleBox'><span class='tittleName'></span><span class='tittleClose'><i></i></span></div>");
-          $(element).append(span);
-          $(".tittleName").html(vm.tittle);*/
-
-
-
-
-          /*var spanScope=$compile(span)(scope);*/
-
-          //element.append(spanScope);
 
         }
       }
