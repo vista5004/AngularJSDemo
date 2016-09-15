@@ -604,7 +604,10 @@ a:hover{
   font-size: 13px;
   line-height: 41px;
   margin-left: 14px;
+  display: inline-block;
 }
+
+
 .top_bar .top_bar_names .tittleContent .titleBox .repeatBox i{
   color: rgb(153, 153, 153);
   margin-left: 5px;

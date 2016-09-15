@@ -210,7 +210,7 @@
         controller:'composingController'
       })
       .state("home.fontIcon",{
-        url:'fontIcon',
+        url:'/fontIcon',
         templateUrl:'app/main/UI/fontIcon.html',
         controller:'fontIconController'
       })
@@ -250,7 +250,7 @@
         controller:'treeController'
       })
       .state("home.toastr",{
-        url:'/toastr',
+        url:'/Toastr',
         templateUrl:'app/main/UI/toastr.html',
         controller:'toastrController'
       })

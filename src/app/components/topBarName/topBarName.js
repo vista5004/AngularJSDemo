@@ -13,10 +13,8 @@
           var number=null;
           scope.$on("tittleName", function (e, data) {
             scope.messageArray=messageService.messageArray;
-            //console.log(messageService.messageArray)
             number=messageService.messageArray.length-1;
-            /*console.log(number);
-            scope.isSelect=number;*/
+
             $timeout(function () {
               $(".repeatBox").css({
                 background:'#f3f3f4'

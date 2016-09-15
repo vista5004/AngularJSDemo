@@ -4,9 +4,9 @@
 
   <div class="titleBox">
     <div ng-repeat="data in messageArray" class="repeatBox"  ng-click="select(data)" id={{data.key}} ng-class="{true:'TopBarActive',false:'TopBarUnActive'}[isSelect===data.key]">
-      <span class="tittleName">
+      <a href="#/home/{{data.route}}" class="tittleName">
         {{data.tittle}}
-      </span>
+      </a>
       <i class='glyphicon glyphicon-remove' key="{{data.tittle}}" ng-click="deleteItem(data)"></i>
     </div>
   </div>
