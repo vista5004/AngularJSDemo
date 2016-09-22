@@ -3,7 +3,7 @@
 
   angular
     .module('angularJsdemo')
-    .controller('MainController', ['$scope','$rootScope','getUpdateService','$interval',function ($scope,$rootScope,getUpdateService,$interval) {
+    .controller('MainController', ['$scope','$rootScope','getUpdateService','$interval',"$location",function ($scope,$rootScope,getUpdateService,$interval,$location) {
         var vm=$scope.vm={};
         vm.superName="Cycle";
         vm.tittle="管理员";
@@ -42,5 +42,5 @@
         })
       },1000)
     }]);
-
+    /*layout cssanimation重定向*/
 })();
