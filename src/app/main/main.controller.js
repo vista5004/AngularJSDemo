@@ -40,7 +40,15 @@
         }, function (error) {
           console.log(error)
         })
-      },1000)
+      },1000);
+
+      /*layout cssanimation重定向*/
+      vm.layoutPath=function(){
+        $location.path('/home/layout');
+      };
+      vm.CSSAnimationPath= function () {
+        $location.path("/home/CSSAnimation");
+      };
     }]);
-    /*layout cssanimation重定向*/
+
 })();

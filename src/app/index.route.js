@@ -311,13 +311,11 @@
       })
       .state("home.CSSAnimation",{
         url:"/CSSAnimation",
-        templateUrl:'app/main/tools/CSSAnimation.html',
-        controller:'CSSAnimationController'
-      })
+        templateUrl:'app/main/CSSAnimation/CSSAnimation.html',
+        controller:'animationController'
+      });
 
-
-
-    $urlRouterProvider.otherwise('/home/home1');
+     $urlRouterProvider.otherwise('/home/home1');
   }
 
 })();
