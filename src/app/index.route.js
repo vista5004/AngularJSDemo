@@ -309,6 +309,11 @@
         templateUrl:'app/main/tools/formCreater.html',
         controller:'formCreaterController'
       })
+      .state("home.CSSAnimation",{
+        url:"/CSSAnimation",
+        templateUrl:'app/main/tools/CSSAnimation.html',
+        controller:'CSSAnimationController'
+      })
 
 
 

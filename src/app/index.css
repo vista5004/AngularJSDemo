@@ -296,6 +296,8 @@ a:hover{
   top: 18px;
   font-size: 14px;
   color: #a7b1c2;
+  width: 128px;
+  height: 30px;
 }
 .left_bar .left_bar_body .left_bar_body_box .left_bar_body_bar .left_bar_body_bar_i {
   display: inline-block;
