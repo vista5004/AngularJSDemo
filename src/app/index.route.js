@@ -71,7 +71,7 @@
       })
       .state("home.normalValidate",{
         url:"/normalValidate",
-        templateUrl:'app/main/form/normalValidate',
+        templateUrl:'app/main/form/normalValidate.html',
         controller:'normalValidateController'
       })
       .state("home.advanceForm",{

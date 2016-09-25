@@ -4,7 +4,7 @@
 (function () {
   angular
     .module('angularJsdemo')
-    .directive("topbarName", ["$compile","messageService","$timeout","$location",function ($compile,messageService,$timeout,$location) {
+    .directive("topbarName", ["$compile","messageService","$timeout","$location","$rootScope",function ($compile,messageService,$timeout,$location,$rootScope) {
       return{
         restrict:'EA',
         scope:{},
@@ -15,14 +15,38 @@
             scope.messageArray=messageService.messageArray;
             number=messageService.messageArray.length-1;
 
-            $timeout(function () {
+           /* $timeout(function () {
               $(".repeatBox").css({
                 background:'#f3f3f4'
               });
               $(".repeatBox").eq(number).css({
                 background:'#2f4050'
               })
-            },10)
+            },10)*/
+
+            /**/
+            //console.log($location);
+            $rootScope.$on("$stateChangeSuccess", function (evt,toState,toParams,formState,formParams) {
+                var state=toState.name;//获取路由状态名 home.home1
+                var routeName=state.split(".").pop();//转变成数组，在取得最后一项
+
+                $(".repeatBox").css({//先遍历统一样式
+                    background:'#f3f3f4'
+                });
+                var elementsDiv=$(".repeatBox");//获取所有topbar内容
+                for(var i=0;i<elementsDiv.length;i++){//
+                  //console.log("length"+$(elementsDiv[i]).attr("state"))
+                  if($(elementsDiv[i]).attr("state")===routeName){//找到路由中传递的状态与topbar中项相同的内容
+                    $(elementsDiv[i]).css({
+                      "background":"#2f4050"
+                    })
+                  }
+                }
+
+            })
+
+
+
           });
           scope.deleteItem= function (data) {
             //console.log(data.tittle);

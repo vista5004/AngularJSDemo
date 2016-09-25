@@ -9,7 +9,7 @@
       var messageWEIYI=[];
       var i=0;
       var routeName={         //标题名字与路由关键字对应关系
-        "EChart":"EChart",
+        "EChart":"Echart",
         "D3":"D3",
         "HighChart":"HighChart",
         "主页1":"home1",
@@ -93,10 +93,12 @@
         console.log(item);*/
         messageWEIYI.splice(index,1);
         messageArray.splice(index,1);
-
-        var route=messageArray[index-1].route;
-        $location.path("/home/"+route);
-
+        //console.log(messageArray.length-1);
+        //console.log(index);
+        if(messageArray.length===index){//只有在删除topbar 最后一个标签的时候，自动向前移动，
+          var route=messageArray[index-1].route;
+          $location.path("/home/"+route);
+        }
       };
       var isHasMessage= function (item) {
         return messageWEIYI.indexOf(item);

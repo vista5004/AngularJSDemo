@@ -3,7 +3,7 @@
   <button  class="tittleLeft"><i class="glyphicon glyphicon-backward"></i></button>
 
   <div class="titleBox">
-    <div ng-repeat="data in messageArray" class="repeatBox"  ng-click="select(data)" id={{data.key}} ng-class="{true:'TopBarActive',false:'TopBarUnActive'}[isSelect===data.key]">
+    <div ng-repeat="data in messageArray" class="repeatBox"  ng-click="select(data)" id={{data.key}} ng-class="{true:'TopBarActive',false:'TopBarUnActive'}[isSelect===data.key]" state="{{data.route}}">
       <a href="#/home/{{data.route}}" class="tittleName">
         {{data.tittle}}
       </a>
