@@ -4,7 +4,7 @@
 (function () {
   angular
     .module('angularJsdemo')
-    .directive("topbarName", ["$compile","messageService","$timeout",function ($compile,messageService,$timeout) {
+    .directive("topbarName", ["$compile","messageService","$timeout","$location",function ($compile,messageService,$timeout,$location) {
       return{
         restrict:'EA',
         scope:{},

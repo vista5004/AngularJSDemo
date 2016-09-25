@@ -4,7 +4,7 @@
 
   angular
     .module('angularJsdemo')
-    .factory("messageService",["$rootScope",function ($rootScope) {
+    .factory("messageService",["$rootScope","$location",function ($rootScope,$location) {
       var messageArray=[];
       var messageWEIYI=[];
       var i=0;
@@ -66,7 +66,9 @@
         "Ng-table":"ngTable",
         "jqGrid":"jqGrid",
         "FooTable":"fooTable",
-        "表单构造器":"formCreater"
+        "表单构造器":"formCreater",
+        "布局":"layout",
+        "CSS动画":"CSSAnimation"
       };
       var sendMessage= function () {
         $rootScope.$broadcast("tittleName");
@@ -91,6 +93,10 @@
         console.log(item);*/
         messageWEIYI.splice(index,1);
         messageArray.splice(index,1);
+
+        var route=messageArray[index-1].route;
+        $location.path("/home/"+route);
+
       };
       var isHasMessage= function (item) {
         return messageWEIYI.indexOf(item);
