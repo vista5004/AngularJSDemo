@@ -5,8 +5,13 @@
 angular
   .module('angularJsdemo')
   .factory("cssAnimationMessageService", function () {
-    var messageArray=[];
-    var data=[]
+    var messageArray={
+      bounce:'bounce'
+    };
+
+    return{
+      data:messageArray
+    }
   });
 
 

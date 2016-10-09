@@ -1094,7 +1094,7 @@ a:hover{
 
 .animation .animation_box .animation_body .animation_effect{
   padding: 0;
-
+  overflow: hidden;
 
 }
 

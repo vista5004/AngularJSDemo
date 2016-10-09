@@ -5,9 +5,11 @@
 (function () {
   angular
     .module('angularJsdemo')
-    .controller("animationController", ['$scope',function ($scope) {
+    .controller("animationController", ['$scope','cssAnimationMessageService',function ($scope,cssAnimationMessageService) {
         $scope.sendAnimation= function (message) {
+          $scope.addClassName=message;
+          console.log(message);
+        };
 
-        }
     }])
 })();
