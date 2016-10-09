@@ -5,7 +5,9 @@
 (function () {
   angular
     .module('angularJsdemo')
-    .controller("animationController", function () {
+    .controller("animationController", ['$scope',function ($scope) {
+        $scope.sendAnimation= function (message) {
 
-    })
+        }
+    }])
 })();

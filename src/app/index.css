@@ -1125,11 +1125,39 @@ a:hover{
   font-size: 54px;
 }
 
+.animation .animation_box .animation_body .animation_option{
+  padding-left: 30px;
 
-
-
-
-
+}
+.animation .animation_box .animation_body .animation_option h1{
+  color: rgb(103, 106, 108);
+  font-family: "open sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 30px;
+}
+.animation .animation_box .animation_body .animation_option .animation_option_box{
+  height: 334px;
+  background: #f9f8f8;
+  float: inherit;
+}
+.animation .animation_box .animation_body .animation_option .animation_option_box .animation_option_span{
+  width: auto;
+  border: 1px solid #e7eaec;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 6px 8px 0 0;
+  vertical-align: middle;
+}
+.animation .animation_box .animation_body .animation_option .animation_option_box .animation_option_span a{
+  color: rgb(103, 106, 108);
+  font-size: 12px;
+  display: inline-block;
+  padding: 6px 8px 6px 8px;
+  text-align: center;
+}
 
 
 
