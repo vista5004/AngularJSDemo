@@ -14,7 +14,6 @@
           scope.$on("tittleName", function (e, data) {
             scope.messageArray=messageService.messageArray;
             number=messageService.messageArray.length-1;
-
            /* $timeout(function () {
               $(".repeatBox").css({
                 background:'#f3f3f4'
@@ -23,13 +22,11 @@
                 background:'#2f4050'
               })
             },10)*/
-
             /**/
             //console.log($location);
             $rootScope.$on("$stateChangeSuccess", function (evt,toState,toParams,formState,formParams) {
                 var state=toState.name;//获取路由状态名 home.home1
                 var routeName=state.split(".").pop();//转变成数组，在取得最后一项
-
                 $(".repeatBox").css({//先遍历统一样式
                     background:'#f3f3f4'
                 });
@@ -42,22 +39,16 @@
                     })
                   }
                 }
-
             })
-
-
-
           });
           scope.deleteItem= function (data) {
             //console.log(data.tittle);
             messageService.destoryMessage(data.tittle);
-            messageService.sendMessage();
-
+            messageService.sendMessage()
           };
           scope.select= function (data) {
             console.log(data.key);
             id=data.key;//通过在指令上设置id来对应data.key，并且data.key是通过ng-repeat来传入的所以，这样就可以实现data的不一样。
-
             $(".repeatBox").css({
               background:'#f3f3f4'
             });
