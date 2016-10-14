@@ -4,9 +4,9 @@
 (function () {
   angular
     .module('angularJsdemo')
-    .controller("consigneeController", function () {
+    .controller("consigneeController",["$scope" ,function ($scope) {
 
-    })
+    }])
 })()
 
 

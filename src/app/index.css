@@ -52,7 +52,15 @@ a:hover{
   padding: 0;
   width: 100%;
 }
-
+a {
+  outline: none;
+}
+a:focus{
+  outline: none;
+}
+button{
+  outline: none;
+}
 
 
 
@@ -1158,6 +1166,96 @@ a:hover{
   padding: 6px 8px 6px 8px;
   text-align: center;
 }
+
+/*收件箱*/
+.emailContent{
+  height: auto;
+  background: #f3f3f4;
+}
+.consignee{
+  margin: 0 ;
+}
+
+.consignee .consigneeContent{
+  height: 535px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+.consignee .consigneeContent .writingLink{
+  height: 58px;
+
+}
+.consignee .consigneeContent .writingLink a{
+  display: inline-block;
+  height: 38px;
+  width: 100%;
+  background: #1ab394;
+  border-radius: 3px;
+  font-family: "open sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  text-align: center;
+  line-height: 38px;
+  margin: 10px 0 10px 0;
+}
+
+
+.consignee .consigneeList{
+  height:auto;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
