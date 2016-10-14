@@ -63,13 +63,50 @@ button{
 }
 
 
+/*iconfont*/
 
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1476461208'); /* IE9*/
+  src: url('iconfont.eot?t=1476461208#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1476461208') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1476461208') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1476461208#iconfont') format('svg'); /* iOS 4.1- */
+}
 
-
-
-
-
-
+.iconfont {
+  font-family:"iconfont" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-setting:before { content: "\e632"; }
+.icon-weixin:before { content: "\e63f"; }
+.icon-guanbixianshi:before { content: "\e63e"; }
+.icon-trash:before { content: "\e637"; }
+.icon-iconfontwjjdownload:before { content: "\e622"; }
+.icon-dollaro:before { content: "\e61e"; }
+.icon-nav:before { content: "\e62b"; }
+.icon-plussquare:before { content: "\e62e"; }
+.icon-time:before { content: "\e636"; }
+.icon-upload:before { content: "\e638"; }
+.icon-users:before { content: "\e63a"; }
+.icon-warningo:before { content: "\e63c"; }
+.icon-warning:before { content: "\e63b"; }
+.icon-fly:before { content: "\e620"; }
+.icon-edit:before { content: "\e61f"; }
+.icon-qq:before { content: "\e630"; }
+.icon-infoo:before { content: "\e624"; }
+.icon-location:before { content: "\e628"; }
+.icon-loadingout:before { content: "\e627"; }
+.icon-loading:before { content: "\e626"; }
+.icon-list:before { content: "\e625"; }
+.icon-menu:before { content: "\e629"; }
+.icon-message:before { content: "\e62a"; }
+.icon-arrowup:before { content: "\e612"; }
+.icon-closecircle:before { content: "\e61a"; }
+.icon-close:before { content: "\e619"; }
+.icon-checkcircle:before { content: "\e618"; }
 
 
 
@@ -1197,6 +1234,23 @@ button{
   line-height: 38px;
   margin: 10px 0 10px 0;
 }
+.consignee .consigneeContent .fileBox{
+  height: 188px;
+  width: 100%;
+
+}
+.consignee .consigneeContent .fileBox span{
+  height: 20px;
+  width: 40px;
+  text-align: left;
+  margin-top: 12px;
+}
+.consignee .consigneeContent .fileBox .fileBoxList{
+  margin-top: 6px;
+
+}
+
+
 
 
 .consignee .consigneeList{
