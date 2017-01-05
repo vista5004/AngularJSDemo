@@ -204,6 +204,11 @@
         templateUrl:'app/main/page/emptyPage.html',
         controller:'emptyPageController'
       })
+      .state("home.resetPassword",{
+        url:'/resetPassword',
+        templateUrl:'app/main/page/resetPassword.html',
+        controller:''
+      })
       .state("home.composing",{
         url:'/composing',
         templateUrl:'app/main/UI/composing.html',
