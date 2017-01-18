@@ -1,0 +1,23 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading font-bold">
+    Form elements
+  </div>
+  <div class="panel-body">
+    <div class="line line-dashed b-b line-lg pull-in"></div>
+    <div ng-controller="DatepickerDemoCtrl">
+      <form action="" class="form-horizontal">
+        <div class="form-group">
+          <label class="control-label col-sm-1">选择日期</label>
+          <div class="col-sm-2">
+            <input  id="jqdatepicker" class="form-control col-sm-3" jqdatepicker pickData="{{pickData}}"
+                    ng-model="search.Date"/>
+          </div>
+          <div class="col-sm-1">
+            <span class="form-control col-sm-1">{{pickData}}</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
