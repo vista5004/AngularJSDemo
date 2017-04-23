@@ -20,7 +20,6 @@
               scope.pickData=date;
               scope.$apply(function () {
                 ngModelContro.$setViewValue(date);
-                console.log(date);
               })
             }
           });
